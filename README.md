@@ -37,11 +37,13 @@ Table: Members
 
 
 Script to generate data in the member table can be found in the file `generate_member_data.py`.  
-Please note that you'll need to install the faker library in your Databricks environment for this script to work. You can install it using the following command:
+Please note that you'll need to install the faker library in your Databricks environment for this script to work.  
+You can install it using the following command:
 `!pip install faker`
 
-
-
-
 Please provide the notebook code, along with an explanation of each step and function used, to extract the data from the MySQL database, write it to Parquet files, store the files in blob storage, and then read and load the data into tables in Databricks.  
+
+Please include your considerations for scalability and data security in the given scenario.  
+Please fork this repository as a private repository and invite matthewlamlcjg as a collaborator for submission.  
+Good luck!
 
