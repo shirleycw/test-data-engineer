@@ -10,7 +10,7 @@ Objectives of this test:
 
 Expected time: < 8 hours
 
-Please write a notebook in Databricks and set up a workflow to obtain data from a MySQL database, write the data to Parquet files using Databricks, and store the files in blob storage.  
+Please write a notebook in Databricks and set up a workflow to obtain data from a MySQL database with the sample table structure below, write the data to Parquet files using Databricks, and store the files in blob storage.  
 Additionally, you need to create another workflow that reads the Parquet files and loads the data into tables in Databricks.  
 Consider the following guidelines:
 
@@ -36,45 +36,10 @@ Table: Members
 - registration_date (date) - Date when the member registered
 
 
+Script to generate data in the member table can be found in the file `generate_member_data.py`.  
 Please note that you'll need to install the faker library in your Databricks environment for this script to work. You can install it using the following command:
 `!pip install faker`
 
-Script to generate data in the member table:
-```
-import random
-from faker import Faker
-import pandas as pd
-
-# Set seed for reproducibility
-random.seed(123)
-
-# Initialize Faker library
-fake = Faker()
-
-# Set the number of sample records to generate
-num_records = 1000
-
-# Generate sample member data
-member_data = []
-for _ in range(num_records):
-    member_id = fake.uuid4()
-    first_name = fake.first_name()
-    last_name = fake.last_name()
-    email = fake.email()
-    phone_number = fake.phone_number()
-    address = fake.street_address()
-    city = fake.city()
-    country = fake.country()
-    registration_date = fake.date_between(start_date='-2y', end_date='today')
-    
-    member_data.append([member_id, first_name, last_name, email, phone_number, address, city, country, registration_date])
-
-# Create pandas DataFrame from the generated data
-df_members = pd.DataFrame(member_data, columns=['member_id', 'first_name', 'last_name', 'email', 'phone_number', 'address', 'city', 'country', 'registration_date'])
-
-# Display sample data
-df_members.head()
-```
 
 
 
