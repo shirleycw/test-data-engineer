@@ -2,13 +2,17 @@
 
 Welcome to the code test for the Data Engineer position! This test aims to evaluate your skills in designing a cost-effective and secure data solution using Databricks, as well as your ability to perform data extraction, transformation, and loading tasks.
 
-Objectives of this test:
+## Objectives
 
 1. Define components for data storage, processing, and security, considering different data types.
 1. Incorporate suitable tools and technologies aligned with Databricks.
 1. Address cost-effectiveness, scalability, and resource utilization.
 
-Expected time: < 8 hours
+## Expected time
+
+- < 8 hours
+
+## Scenario
 
 Please write a notebook in Databricks and set up a workflow to obtain data from a MySQL database with the sample table structure below, write the data to Parquet files using Databricks, and store the files in blob storage.  
 Additionally, you need to create another workflow that reads the Parquet files and loads the data into tables in Databricks.  
@@ -35,7 +39,6 @@ Table: Members
 - country (string) - Country where the member resides
 - registration_date (date) - Date when the member registered
 
-
 Script to generate data in the member table can be found in the file `generate_member_data.py`.  
 Please note that you'll need to install the faker library in your Databricks environment for this script to work.  
 You can install it using the following command:
@@ -44,6 +47,9 @@ You can install it using the following command:
 Please provide the notebook code, along with an explanation of each step and function used, to extract the data from the MySQL database, write it to Parquet files, store the files in blob storage, and then read and load the data into tables in Databricks.  
 
 Please include your considerations for scalability and data security in the given scenario.  
+
+## Submission
+
 Please fork this repository as a private repository and invite matthewlamlcjg as a collaborator for submission.  
 Good luck!
 
